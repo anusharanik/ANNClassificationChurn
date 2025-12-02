@@ -1,0 +1,7 @@
+tensorflow==2.15.0
+pandas
+numpy
+scikit-learn #for feature engineering libraries and data tranformation libraries
+tensorboard
+matplotlib
+streamlit
