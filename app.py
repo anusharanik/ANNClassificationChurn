@@ -12,7 +12,7 @@ model=tf.keras.models.load_model('model.h5')
 
 with open('labelEncoderGender.pkl','rb') as file:
     labelEncoderGender=pickle.load(file)
-with open('OneHotEncoderGeo.pkl','rb')as file:
+with open('onehotEncoderGeo.pkl','rb')as file:
     onehotEncoderGeo=pickle.load(file)
 with open('scaler.pkl','rb') as file:
     scaler=pickle.load(file)
@@ -65,4 +65,5 @@ st.write(f'Churn Probability: {prediction_proba:.2f}')
 if prediction_proba > 0.5:
     st.write('The customer is likely to churn.')
 else:
+
     st.write('The customer is not likely to churn.')
