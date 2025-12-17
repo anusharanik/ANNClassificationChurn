@@ -1,4 +1,5 @@
 import numpy as np
+import os
 import tensorflow as tf
 from tensorflow.keras.datasets import imdb
 from tensorflow.keras.preprocessing import sequence
@@ -9,7 +10,9 @@ word_index=imdb.get_word_index()
 reverse_word_index = {value: key for key, value in word_index.items()}
 
 #Load the pre-trained model with ReLU activation
-model=load_model('simpleRNNimdb.h5')
+BASE_DIR = os.path.dirname(__file__)
+MODEL_PATH = os.path.join(BASE_DIR, "simpleRNNimdb.h5")
+model=load_model(MODEL_PATH)
 
 #Step2: Helper functions
 #Function to decode reviews
